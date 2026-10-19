@@ -5,6 +5,7 @@ import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { FitScale } from '../../components/FitScale';
 import { GuestWalkthrough, walkthroughScenes } from '../../components/GuestWalkthrough';
 import { InvitationCard } from '../../components/InvitationCard';
+import { Watermark } from '../../components/Watermark';
 import { clipLabel } from '../../components/TrackCard';
 import { Button, SelectCard } from '../../components/ui';
 import { clipFor, useAudio } from '../../lib/audio';
@@ -166,6 +167,7 @@ export default function Ready() {
           <Lock size={13} aria-hidden /> Prototype checkout, no payment taken · <Zap size={13} aria-hidden /> Instant link · Your secret answer never leaves this device ·{' '}
           <Link to="/legal">Details</Link>
         </p>
+        <Watermark />
       </section>
 
       <GuestDemo open={demoOpen} onClose={() => setDemoOpen(false)} />

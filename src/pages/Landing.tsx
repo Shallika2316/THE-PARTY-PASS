@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Header } from '../components/Header';
+import { Watermark } from '../components/Watermark';
 import { ButtonLink, Eyebrow } from '../components/ui';
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -45,6 +46,7 @@ export default function Landing() {
         </div>
         <HeroArt className="hero-art-mobile" src="/img/hero-collage.webp" crop={COLLAGE} />
       </main>
+      <Watermark />
     </div>
   );
 }

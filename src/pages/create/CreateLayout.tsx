@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import { Navigate, useLocation, useNavigate, useOutlet } from 'react-router-dom';
 import { Header } from '../../components/Header';
 import { ProgressSteps } from '../../components/ProgressSteps';
+import { Watermark } from '../../components/Watermark';
 import { hasErrors, validateDetails, validateGame, validateMusic, validatePersonalise } from '../../lib/invitation';
 import { useDraft } from '../../lib/store';
 import type { Invitation } from '../../lib/types';
@@ -87,6 +88,7 @@ export default function CreateLayout() {
           </motion.div>
         </AnimatePresence>
       </main>
+      <Watermark />
     </div>
   );
 }

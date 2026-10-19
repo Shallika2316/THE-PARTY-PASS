@@ -4,6 +4,7 @@ import { DiscoBall } from '../components/decor/DiscoBall';
 import { ConfettiScatter, Star } from '../components/decor/Ornaments';
 import { GuestExperience, type GuestStage, type Location } from '../components/GuestExperience';
 import { Logo } from '../components/Header';
+import { Watermark } from '../components/Watermark';
 import { decodeInvite, toGuestInvite } from '../lib/invitation';
 import { cachedGuestInvite, cacheGuestInvite, markUnlocked, readJSON, saveRsvp, savedRsvp, unlockedState } from '../lib/store';
 import type { GuestInvite, Invitation, RsvpResponse } from '../lib/types';
@@ -76,6 +77,7 @@ export default function GuestPage({ view }: { view: 'play' | 'reveal' | 'rsvp' }
           }}
         />
       </main>
+      <Watermark />
     </div>
   );
 }

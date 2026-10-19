@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Header } from '../components/Header';
+import { Watermark } from '../components/Watermark';
 import { Eyebrow } from '../components/ui';
 
 export default function Legal() {
@@ -51,6 +52,7 @@ export default function Legal() {
           </Link>
         </p>
       </main>
+      <Watermark />
     </div>
   );
 }

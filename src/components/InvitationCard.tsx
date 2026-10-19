@@ -4,6 +4,7 @@ import { formatDate, formatTimeRange } from '../lib/invitation';
 import type { GuestInvite } from '../lib/types';
 import { DiscoBall } from './decor/DiscoBall';
 import { Burst, Cocktail, Heart, Star } from './decor/Ornaments';
+import { WATERMARK } from './Watermark';
 
 interface Props {
   invite: GuestInvite;
@@ -31,6 +32,9 @@ export function InvitationCard({ invite, location, children, className, size = '
   return (
     <article className={`pass pass-${invite.vibe} pass-${size} ${className ?? ''}`} aria-label={`Invitation for ${invite.guestName || 'your guest'}`}>
       <div className="pass-main">
+        <span className="pass-watermark" aria-hidden="true">
+          {WATERMARK}
+        </span>
         <div className="pass-top">
           <span>KoiKoi · The Party Pass</span>
           <span>No. {serial}</span>
