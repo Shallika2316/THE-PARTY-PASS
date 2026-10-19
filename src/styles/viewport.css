@@ -1633,7 +1633,8 @@
     gap: 14px;
   }
   .create-card {
-    overflow: visible;
+    /* clip, not hidden: keeps the sticky Continue bar working and the watermark inside the card */
+    overflow: clip;
     padding: 28px 20px 16px;
   }
   .step-form {

@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import { Navigate, useLocation, useNavigate, useOutlet } from 'react-router-dom';
 import { Header } from '../../components/Header';
 import { ProgressSteps } from '../../components/ProgressSteps';
-import { Watermark } from '../../components/Watermark';
+import { Watermark, WATERMARK } from '../../components/Watermark';
 import { hasErrors, validateDetails, validateGame, validateMusic, validatePersonalise } from '../../lib/invitation';
 import { useDraft } from '../../lib/store';
 import type { Invitation } from '../../lib/types';
@@ -84,6 +84,9 @@ export default function CreateLayout() {
             exit="exit"
             transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
           >
+            <span className="form-watermark" aria-hidden="true">
+              {WATERMARK}
+            </span>
             {outlet}
           </motion.div>
         </AnimatePresence>
