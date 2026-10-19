@@ -56,7 +56,7 @@ export default function Personalise() {
 
   return (
     <form onSubmit={submit} noValidate className="step-form">
-      <Eyebrow className="is-kept">Step 1 of 3</Eyebrow>
+      <Eyebrow className="is-kept">Step 1 of 4</Eyebrow>
       <h1 className="step-title">
         Who’s getting the <span className="accent">party pass?</span>
       </h1>

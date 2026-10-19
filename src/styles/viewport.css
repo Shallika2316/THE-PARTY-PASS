@@ -1572,3 +1572,136 @@
 .link-fields .field {
   gap: 6px;
 }
+
+/* ================= Phones: let pages scroll and give everything room ================= */
+@media (max-width: 760px) {
+  /* Final screen: one centred column (a later 1100px rule re-adds the three-column grid). */
+  .ready-stage {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20px;
+  }
+  .ready-col {
+    width: 100%;
+  }
+  .ready-steps {
+    height: auto;
+    align-items: center;
+    overflow: visible;
+  }
+  .ready-try {
+    align-self: center;
+    margin-top: 0;
+  }
+  .ready-sound {
+    max-width: 100%;
+  }
+  .ready-bottom {
+    padding: 28px 20px calc(32px + env(safe-area-inset-bottom));
+    gap: 16px;
+  }
+  .ready-plans {
+    max-width: 440px;
+  }
+  .ready-plan-name {
+    padding: 0 22px;
+  }
+  .ready-trust {
+    max-width: 340px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Creation steps scroll as a normal page instead of squeezing into the window. */
+  .page.create {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+    overflow-x: clip;
+  }
+  .create .site-header {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  .create-main {
+    flex: none;
+    gap: 22px;
+    padding: 4px 16px 32px;
+  }
+  .progress {
+    gap: 14px;
+  }
+  .create-card {
+    overflow: visible;
+    padding: 28px 20px 16px;
+  }
+  .step-form {
+    overflow: visible;
+    gap: 26px;
+  }
+  .step-form > .eyebrow {
+    margin-bottom: -12px;
+  }
+  .step-title {
+    font-size: 34px;
+    line-height: 1.05;
+    margin-bottom: -10px;
+  }
+  .step-lede {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .create .field {
+    gap: 10px;
+  }
+  .create .input {
+    height: 52px;
+  }
+  .create .input[type='date'],
+  .create .input[type='time'] {
+    min-height: 52px;
+    line-height: 52px;
+  }
+  .create .textarea {
+    height: 96px;
+  }
+  .create .field-row-3 {
+    gap: 26px 14px;
+  }
+  .step-footer {
+    bottom: 0;
+    margin-top: 4px;
+    padding: 16px 0 calc(12px + env(safe-area-inset-bottom));
+  }
+  .game-layout {
+    gap: 22px;
+  }
+  .game-layout .game-grid {
+    gap: 14px;
+  }
+  .music-picker {
+    gap: 22px;
+  }
+  .publish-step .publish-grid {
+    gap: 28px;
+  }
+  .publish-step .thumb-wrap {
+    height: min(430px, 112vw);
+  }
+  .publish-step .share {
+    gap: 16px;
+  }
+  .publish-step .share-next {
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 16px;
+  }
+}
+
+/* Narrow phones: start and end time each get a full row so the times don't clip. */
+@media (max-width: 420px) {
+  .create .field-row-3 {
+    grid-template-columns: 1fr;
+  }
+}

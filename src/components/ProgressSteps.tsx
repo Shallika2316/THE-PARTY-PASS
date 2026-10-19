@@ -7,9 +7,10 @@ export const CORE_STEPS = [
   { label: 'Personalise', path: '/create/personalise' },
   { label: 'Event Details', path: '/create/event-details' },
   { label: 'Choose Game', path: '/create/choose-game' },
+  { label: 'Choose a Song', path: '/create/music' },
 ];
 
-/** current: 0–2 for the core steps; 3 means all core steps are complete. */
+/** current: 0–3 for the core steps; 4 means all core steps are complete. */
 export function ProgressSteps({ current, maxReached, extra }: { current: number; maxReached: number; extra?: string }) {
   const navigate = useNavigate();
   return (

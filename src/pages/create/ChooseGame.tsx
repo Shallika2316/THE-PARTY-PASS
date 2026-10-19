@@ -30,7 +30,7 @@ export default function ChooseGame() {
 
   return (
     <form onSubmit={submit} noValidate className="step-form">
-      <Eyebrow>Step 3 of 3</Eyebrow>
+      <Eyebrow>Step 3 of 4</Eyebrow>
       <h1 className="step-title">
         Make them <span className="accent">play for it.</span>
       </h1>

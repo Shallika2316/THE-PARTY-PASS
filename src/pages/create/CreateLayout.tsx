@@ -17,7 +17,6 @@ export const FLOW = [
 ];
 
 const EXTRA: Record<string, string> = {
-  '/create/music': 'Optional extra · Add a soundtrack',
   '/create/publish': 'Final step · Unlock & share',
 };
 
@@ -68,7 +67,7 @@ export default function CreateLayout() {
       <CreateBackdrop />
       <Header />
       <main id="main" className="create-main">
-        <ProgressSteps current={Math.min(idx, 3)} maxReached={Math.min(done, 2)} extra={EXTRA[pathname]} />
+        <ProgressSteps current={Math.min(idx, 4)} maxReached={Math.min(done, 3)} extra={EXTRA[pathname]} />
         <AnimatePresence mode="wait" initial={false} custom={direction}>
           <motion.div
             key={pathname}

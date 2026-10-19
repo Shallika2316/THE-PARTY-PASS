@@ -843,6 +843,10 @@
 @media (max-width: 720px) {
   .progress-label {
     font-size: 12px;
+    white-space: normal;
+    text-align: center;
+    max-width: 68px;
+    line-height: 1.2;
   }
   .progress-btn {
     flex-direction: column;
@@ -854,8 +858,8 @@
     font-size: 14px;
   }
   .progress-line {
-    margin: 0 6px 22px;
-    width: clamp(24px, 9vw, 70px);
+    margin: 0 4px 22px;
+    width: clamp(14px, 6vw, 56px);
   }
   .is-active .progress-label::after {
     bottom: -5px;

@@ -25,7 +25,7 @@ export default function EventDetails() {
 
   return (
     <form onSubmit={submit} noValidate className="step-form">
-      <Eyebrow>Step 2 of 3</Eyebrow>
+      <Eyebrow>Step 2 of 4</Eyebrow>
       <h1 className="step-title">
         When does the <span className="accent">fun begin?</span>
       </h1>

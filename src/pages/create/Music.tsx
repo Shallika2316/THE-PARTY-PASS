@@ -69,7 +69,7 @@ export default function Music() {
 
   return (
     <form onSubmit={submit} noValidate className="step-form step-music">
-      <Eyebrow>Optional extra</Eyebrow>
+      <Eyebrow>Step 4 of 4</Eyebrow>
       <h1 className="step-title">
         Give this invite a <span className="accent">soundtrack.</span>
       </h1>
